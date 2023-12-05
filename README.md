@@ -15,3 +15,15 @@ set-hook -g after-kill-pane       'if "[ #{session_windows} -lt 2 ]" "set status
 set-hook -g pane-exited           'if "[ #{session_windows} -lt 2 ]" "set status off"'
 set-hook -g window-layout-changed 'if "[ #{session_windows} -lt 2 ]" "set status off"'
 ```
+
+### اگر از i3 استفاده میکنید و میخواین زمانی که ترمینال رو باز میکنین به صورت خودکار tmux هم برای شما اجرا بشه کافیه اول از همه فایل کانفیگ رو باز کنین که معمولا توی ادرس پایینه
+
+```
+vim .config/i3/config
+```
+
+### و بعد از اون دستور پایین رو اضافه کنین به جای دستور قبلی که برای باز کردن ترمینال داشتین 
+
+```
+bindsym $mod+Return exec kitty -e tmux
+```
