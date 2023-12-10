@@ -15,8 +15,8 @@ set-hook -g after-kill-pane       'if "[ #{session_windows} -lt 2 ]" "set status
 set-hook -g pane-exited           'if "[ #{session_windows} -lt 2 ]" "set status off"'
 set-hook -g window-layout-changed 'if "[ #{session_windows} -lt 2 ]" "set status off"'
 
+# config tmux for support color and italic font
 set -g default-terminal 'tmux-256color'
-set -as terminal-overrides ',xterm*:Tc:sitm=\E[3m']'
 ```
 
 ### اگر از i3 استفاده میکنید و میخواین زمانی که ترمینال رو باز میکنین به صورت خودکار tmux هم برای شما اجرا بشه کافیه اول از همه فایل کانفیگ رو باز کنین که معمولا توی ادرس پایینه
